@@ -1,0 +1,28 @@
+//+------------------------------------------------------------------+
+//| Expert tick function                                             |
+//+------------------------------------------------------------------+
+void OnTick()
+  {
+//---
+      //Reset functionCalled boolean
+      if(MathMod(Minute(),RunFunctionveryXMins)) {
+         functionCalled = false;
+      }
+      
+      //
+      if(functionCalled == false) {
+         if(MathMod(Minute(),RunFunctionveryXMins)) {
+            Print("Don't Run Function");
+         }
+         else {
+            Print("Call Function");
+            //Call Your Function Here
+            
+            //Stop Function being called again
+            functionCalled = true;
+            
+         }
+      }
+      
+  }
+//+------------------------------------------------------------------+ 
