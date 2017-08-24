@@ -1,0 +1,6 @@
+int OnInit()
+//Code
+  { 
+  WindowScreenShot(StringConcatenate("chart\\", Symbol(), Period(), ".png"), 928, 610);
+  return(INIT_SUCCEEDED);
+  }
